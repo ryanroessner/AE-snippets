@@ -1,0 +1,16 @@
+//Create line connecting two positions
+//Apply to shape layer>contents>path
+
+p1 = (thisComp.layer("Name-01").transform.position);
+p2 = (thisComp.layer("Name-02").transform.position);
+createPath(points=[p1, p2])
+
+
+// Circular Motion
+centerX = (thisComp.width/2);
+centerY = (thisComp.height/2);
+rX = 200;
+rY = 200;
+x = centerX  + Math.sin(time) *rX;
+y = centerY  + Math.cos(time) *rY;
+[x,y]
