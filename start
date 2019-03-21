@@ -14,3 +14,11 @@ rY = 200;
 x = centerX  + Math.sin(time) *rX;
 y = centerY  + Math.cos(time) *rY;
 [x,y]
+
+
+//subtitles from .json file, driven by slider controller effect
+var subtitles = "data.json"
+var lines = footage(subtitles).sourceText.split('\n')
+// grab keyframed number from controller 
+var lineNum = (thisComp.layer("VO_text").effect("Slider Control")("Slider"))
+lines[parseFloat(lineNum)];
